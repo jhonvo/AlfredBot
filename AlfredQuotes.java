@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AlfredQuotes {
@@ -24,7 +25,10 @@ public class AlfredQuotes {
     // Output: Returns an announcement of the current date, 
     //         in a polite manner.
     public String dateAnnouncement() {
-        return String.format("It is currently %s", new Date());
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+        String sDate= sdf.format(date);
+        return "My Pleasure, the current date is " + sDate;
     }
     
     // Inputs: String (Any phrase)
